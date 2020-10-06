@@ -1,5 +1,5 @@
 body {
-    background-color: darkslategrey;
+    /* background-color: darkslategrey; */
     display: grid;
     /* fr - dalis */
     grid-template-columns: 100px 1fr 140px; 
