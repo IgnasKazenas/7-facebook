@@ -16,6 +16,18 @@ function renderPosts(data) {
 
     // i ta elementa ikeliame HTML kintamojo reiksme
     feedDOM.innerHTML = HTML;
+
+    // susirasti dominančius elementus .more
+    const allSeeMoreDOM = document.querySelectorAll('.post .more')
+    console.log(allSeeMoreDOM);
+
+    //pradedam stebėt paspaudimus ant jų
+    for (let i = 0; i < allSeeMoreDOM.length; i++) {
+        const seeMore = allSeeMoreDOM[i];
+        seeMore.addEventListener('click', () => {
+            seeMore.closest('.content').classList.add('show');
+        });
+    }
 }
 
 export default renderPosts;

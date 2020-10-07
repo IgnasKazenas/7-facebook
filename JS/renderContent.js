@@ -18,7 +18,6 @@ function renderContent(data) {
     }
 
 
-    console.log(data);
     return `<div class="content">
                 ${textHTML}
                 ${photosHTML}

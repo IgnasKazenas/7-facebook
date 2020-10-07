@@ -5,15 +5,16 @@ function renderContentText(text) {
     }
 
     if (text.length < 61) {
-        return `<p class="big-size">${text}</p>` 
+        return `<p class="big-size">${text}</p>`;
     } else if (text.length < 301) {
         return `<p>${text}</p>`;
     } else {
         let shortedText = '';
         for (let i = 0; i < 300; i++) {
-            shortedText += text [i];
+            shortedText += text[i];
         }
-        return `<p>${shortedText}...<span class="more">See more</span>`;
+        return `<p>${shortedText}... <span class="more">See more</span></p>
+                <p class="hidden">${text}</p>`;
     }
 }
 
