@@ -14,7 +14,7 @@ function renderContent(data) {
 
     let textHTML = '';
     if (data.text) {
-        textHTML = renderContentText(data.text);
+        textHTML = renderContentText(data.text, data.background);
     }
 
 

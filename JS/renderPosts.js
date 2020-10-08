@@ -28,6 +28,27 @@ function renderPosts(data) {
             seeMore.closest('.content').classList.add('show');
         });
     }
+
+    const allSeeLessDOM = document.querySelectorAll(".post .less");
+
+    for (let i=0; i<allSeeLessDOM.length; i++) {
+        const seeLess = allSeeLessDOM[i];
+        seeLess.addEventListener('click', () => {
+            const contentDOM = seeLess.closest('.content');
+            contentDOM.classList.remove('show');
+
+            //issiaiskinti kokiame aukstyje yra .post elementas
+            const postDOM = contentDOM.closest('.post');
+            const postHeightPosition = postDOM.offsetTop;
+            // console.log(postHeightPosition);
+                //scrolliname i nurodyta auksti
+            scrollTo({
+                top: postHeightPosition,
+                behavior: 'smooth'
+            });
+            //window.scrollTo(0, postHeightPosition);
+        });
+    }
 }
 
 export default renderPosts;
